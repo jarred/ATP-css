@@ -1,0 +1,385 @@
+#nav{
+	// background-color: #F4F4F4;
+	.off_the_wall &{
+		// background-color: #191919;
+	}
+	a,
+	form{
+		margin: 20px 0px;		
+		display: block;
+		position: relative;
+		height: 42px;
+	}
+	a{
+		text-decoration: none;
+		color: $gray;
+		font: 400 16px/16px $sans;
+	}
+	.nav_item{
+		position: relative;
+		.text{
+			position: absolute;
+			bottom: -3px;
+			color: $black;
+			em{
+				display: block;
+				font-style: normal;
+				color: $gray;
+			}
+			.off_the_wall &{
+				color: #FFF;
+			}
+		}
+		.underline{
+			border-bottom: 1px solid $red;
+			border-top: 1px dotted $red;
+			height: 2px;
+			position: absolute;
+			bottom: -21px;
+			width: 100px;
+			display: none;
+			.off_the_wall &{
+				border-bottom-color: $purple;
+				border-top-color: $purple;
+			}
+		}
+		&.logo{
+			.underline{
+				width: 145px;
+			}
+		}
+		.logo{
+			@include background-sprite('base','logo-arts-te-papa');
+			height: 45px;
+			width: 145px;
+			html.off_the_wall &{
+				@include background-sprite('base','logo-arts-te-papa-white');
+			}
+		}
+		&:hover{
+			.text{
+				em{
+					display: block;
+				}
+			}
+			.underline{
+				display: block;
+				border-color: $gray;
+				border-top-color: transparent;
+			}
+		}
+		&.active,
+		&.active:hover{
+			.underline{
+				display: block;
+				border-color: $red;
+				.off_the_wall &{
+					border-color: $purple;
+				}
+			}
+			.text{
+				color: $red;
+				em{
+					color: $red;
+					display: block;
+				}
+				.off_the_wall &{
+					color: $purple;
+					em{
+						color: $purple;
+					}
+				}
+			}
+		}
+		input{
+			position: relative;
+			top: 3px;
+			border: 0px;
+			padding: 0px;
+			outline: none;
+			background-color: transparent;
+			font: 400 16px/20px $sans;
+			.off_the_wall &{
+				color: #FFF;
+			}
+			&:focus{
+				:-moz-placeholder,
+				::-webkit-input-placeholder{
+					color: #FFF;
+				}
+			}
+		}
+	}
+	.bottom_nav_border{
+		height: 1px;
+		margin: 0px $edge_width;
+		background-color: $light_gray;
+		.off_the_wall &{
+			background-color: #333;
+		}
+	}
+	.mobile_nav_hamburger,
+	.mobile_nav_items{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 766px) {
+	#nav{
+		.mobile_nav_hamburger,
+		.mobile_nav_items{
+			display: block;
+		}
+		.nav_item{
+			display: none;
+		}
+		.logo{
+			display: block;
+		}
+		.mobile_nav_hamburger{
+			width: 82px;
+			height: 82px;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			background-color: $light_gray;
+			.close,
+			.lines{
+				width: 30px;
+				position: absolute;
+				left: 50%;
+				margin-left: -15px;
+				top: 50%;
+				margin-top: -15px;
+			}
+			.close{
+				display: none;
+				font: 400 60px/30px $sans;
+				text-align: center;
+				color: #FFF;
+				margin-top: -20px;
+				.off_the_wall &{
+					color: $gray;
+				}
+			}
+			.lines{
+				display: block;
+				.line{
+					height: 5px;
+					background-color: $gray;
+					margin-bottom: 5px;
+				}
+			}
+			&.open{
+				background-color: $black;
+				.close{
+					display: block;
+				}
+				.lines{
+					display: none;
+				}
+				.off_the_wall &{
+					background-color: #FFF;
+				}
+			}
+			.off_the_wall &{
+				background-color: #000;
+				.lines{
+					.line{
+						background-color: $gray;
+					}
+				}
+				&.open{
+//					background-color:
+				}
+			}
+		}
+		.mobile_nav_items{
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 82px;
+			padding: 22px;
+			z-index: 100;
+			background-color: $black;
+			display: none;
+			.off_the_wall &{
+				background-color: #FFF;
+			}
+			&.open{
+				display: block;
+			}
+			ul{
+				margin: 0px;
+				padding: 0px;
+				li{
+					list-style-type: none;
+					margin: 0px;
+					padding: 0px;
+					a{
+						display: block;
+						margin: 0px;
+						height: auto;
+						font: 400 20px/40px $sans;
+						&.active{
+							color: $red;
+							text-decoration: underline;
+							.off_the_wall &{
+								color: $purple;
+							}
+						}
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+					form{
+						display: block;
+						margin: 0px;
+						height: auto;
+						input{
+							border: 0px;
+							padding: 0px;
+							outline: none;
+							background-color: transparent;
+							font: 400 20px/40px $sans;
+							color: #FFF;
+							.off_the_wall &{
+								color: $black;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.breadcrumbs{
+	border-bottom: 1px dotted #DDD;
+	font: 400 14px/30px $sans;
+	margin-bottom: 20px;
+	position: relative;
+	p{
+		margin: 6px 100px 6px 0px;
+		line-height: 18px;
+	}
+	a{
+		text-decoration: none;
+		color: $gray;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.separator{
+		color: #CCC;
+		position: relative;
+		top: 1px;
+		.off_the_wall &{
+			color: #555;
+		}
+	}
+	.current{
+		color: $gray;
+		font-style: italic;
+		.off_the_wall &{
+			color: $gray;
+		}
+	}
+	.off_the_wall &{
+		border-color: #444;
+	}
+	.share{
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		border: 1px solid $light_gray;
+		border-top: 0px;
+		width: 70px;
+		text-align: center;
+		.share_text{
+			display: inline-block;
+			color: #CCC;
+			position: relative;
+			left: 2px;
+			top: -2px;
+		}
+		.sharing_options{
+			display: none;
+			padding-bottom: 5px;
+			ul{
+				padding: 0px;
+				margin: 0px;
+				li{
+					padding: 0px;
+					list-style-type: none;
+					margin: 0px;
+					a{
+						display: block;
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		&:hover,
+		&:active{
+			z-index: 999;
+			background-color: #FFF;
+			border-color: $gray;
+			.share_text{
+				color: $light_gray;
+			}
+			.sharing_options{
+				display: block;
+			}
+		}
+		.off_the_wall &{
+			border-color: #333;
+			.share_text{
+				color: #888;
+			}
+			ul li a{
+				color: #FFF;
+			}
+			&:hover,
+			&:active{
+				border-color: #555;
+				background-color: $black;
+				.share_text{
+					color: #555;
+				}
+			}
+		}
+	}
+}
+
+.footer{
+	background-color: #f5f5f5;
+	padding: 20px 0px;
+	font-size: 15px;
+	.col{
+		padding-bottom: 20px;
+	}
+	a.te-papa-logo{
+		@include background-sprite('base','logo-te-papa');
+		width: 42px;
+		height: 85px;
+		display: block;
+	}
+	a{
+		text-decoration: none;
+		color: $black;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	ul{
+		margin: 0px;
+		padding: 0px;
+		li{
+			list-style-type: none;
+		}
+	}
+}

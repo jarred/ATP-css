@@ -1,0 +1,262 @@
+@import "compass/css3/opacity";
+
+body.index .off_the_wall{
+	padding-bottom: 50px;
+}
+
+#exhibitions_promo{
+	padding-bottom: 40px; /* Was 40px from springload ck 180213 */
+	margin-top: 40px;
+	overflow-x: hidden;
+	.current_exhibition{
+		position: relative;
+		// height: 600px;
+		margin-bottom: 7em;
+		.now_showing{
+			position: absolute;
+			top: 0px;
+			z-index: 10;
+			left: 0px;
+		}
+		table{
+			width: 100%;
+			height: 500px;
+			td{
+				height: 100%;
+				overflow: visible;
+			}
+		}
+		.exhibition{
+			text-decoration: none;
+			color: $black;
+			display: block;
+			position: relative;
+			.image{
+				overflow: hidden;
+				img{
+					max-height: 500px;
+					max-width: 100%;
+				}
+			}
+			.info{
+				position: absolute;
+				text-align: center;
+				bottom: -90px;
+				left: 0px;
+				right: 0px;
+				h1{
+					font: $bold_weight 40px/40px $bold_weight;
+				}
+				h2{
+					color: $red;
+				}
+			}
+			&.loading{
+				@include opacity(0);
+			}
+		}
+		.arrow{
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 50%;
+			margin-top: -70px;
+			z-index: 10;
+			&.previous{
+				left: 20px;
+				@include background-sprite('base','arrow-left');
+			}
+			&.next{
+				right: 20px;
+				@include background-sprite('base','arrow-right');
+			}
+		}
+	}
+	.exhibition_preview{
+		// position: relative;
+		display: none;
+		height: 590px;
+		.image{
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 50%;
+			margin-top: -200px;
+			overflow: hidden;
+			img{
+				max-height: 400px;
+			}
+		}
+		/*
+		img{
+			position: absolute;
+			max-height: 400px;
+			top: 50%;
+			margin-top: -200px;
+			@include opacity(.4);
+			&:hover{
+				cursor: pointer;
+				@include opacity(1);
+			}
+		}*/
+		&.previous_exhibition{
+			.image{
+				text-align: left;
+				right: 50%;
+				margin-right: 490px;
+				img{
+					position: relative;
+					left: -200px;
+				}
+			}
+		}
+		&.next_exhibition{
+			.image{
+				left: 50%;
+				text-align: right;
+				margin-left: 490px;
+				img{
+					position: relative;
+					right: -200px;
+				}
+			}
+		}
+	}
+	.exhibition_details,
+	.exhibition_number{
+		margin-top: 20px;
+	}
+	.exhibition_number{
+		text-align: right;
+	}
+}
+
+#events_page{
+	margin-top: 20px;
+}
+.events{
+	padding-bottom: 50px;
+	.event{
+		margin-bottom: 20px;
+		position: relative;
+		h2, p{
+			margin-left: 80px;
+		}
+		h2{
+			font: $bold_weight 30px/30px $bold;
+			margin-bottom: 4px;
+			a{
+				color: #FFF;
+			}
+		}
+		p{
+			color: $dark_gray;
+		}
+		.date{
+			background-color: #FFF;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 60px;
+			margin: 0px;
+			text-align: center;
+			color: $black;
+			.month, .dayofweek{
+				display: block;
+				font: $bold_weight 12px/12px $bold;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				text-indent: -1px;
+				padding: 4px 0px 8px;
+			}
+			.day{
+				padding-bottom: 8px;
+				display: block;
+				font: $bold_weight 22px/22px $bold;
+				letter-spacing: 2px;
+				text-indent: -1px;
+			}
+		}
+		.now_showing{
+			color: #FFF;
+			border-color: #FFF;
+			margin: 2px;
+		}
+	}
+}
+
+.eventspage .event{
+	clear: left;
+	h2 a {
+		color: $black;
+	}
+	.date 
+	{
+		color: #fff;
+		background-color: $black;
+	}
+}
+
+@media screen and (max-width: 1020px) {
+	.events{
+		.event{
+			h2, p{
+				margin-left: 62px;
+			}
+			.date{
+				width: 42px;
+				margin-left: 0px;
+				left: 0px;
+//				left: -62px;
+			}
+		}
+	}
+	#exhibitions_promo{
+		.current_exhibition{
+			height: 500px;
+			table{
+				height: 400px;
+			}
+			.exhibition{
+				.image img{
+					max-height: 400px;
+				}
+			}
+		}
+	}
+}
+
+#homepage_mobile_exhibition{
+	margin-top: 40px;
+	display: none;
+	text-align: center;
+}
+
+@media screen and (max-width: 766px) {
+	#homepage_mobile_exhibition{
+		display: block;
+	}
+	#exhibitions_promo{
+		.current_exhibition{
+			height: 400px;
+			table{
+				height: 300px;
+			}
+			.exhibition{
+				.image img{
+					max-height: 300px;
+				}
+				.info{
+					position: absolute;
+					text-align: center;
+					bottom: -120px;
+					left: 0px;
+					right: 0px;
+					h1{
+						font: $bold_weight 28px/28px $bold_weight !important;
+					}
+				}
+			}
+		}
+	}
+}

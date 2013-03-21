@@ -1,0 +1,20 @@
+#standard_page{
+	padding: 20px 0px;
+	em.code{
+		font-family: 'monaco', monospace;
+		font-style: normal;
+		font-size: 0.73em;
+		background-color: $black;
+		letter-spacing: 1px;
+		position: relative;
+		display: inline-block;
+		padding: 3px;
+		top: -1px;
+		color: #FFF;
+	}
+	h2, h3{
+		font-weight: $bold_weight;
+		font-family: $bold;
+		color: $gray;
+	}
+}

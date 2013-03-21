@@ -1,0 +1,86 @@
+$degredation-selector: '.no_media_queries';
+$grid-debug: false;
+
+
+@include define-grid-settings(
+	$grid-name: 'grid-12',
+	$is-fluid: false,
+	$column-width: 60,
+	$gutter-width: 20,
+	$gutter-property: 'margin',
+	$num-columns: 12,
+	$padding-left: 20,
+	$padding-right: 20,
+	$breakpoints: (
+		(
+            query 'screen and (max-width: 1020px)',
+            max-width 800px,
+            padding-left 20px,
+            padding-right 20px,
+            apply-to-browsers-w/o-media-queries true
+        ),(
+	        query 'screen and (max-width: 1020px)',
+	        max-width 768px,
+	        padding-left 22px,
+	        padding-right 22px,
+	        column-width 42
+        ),(
+            query 'screen and (max-width: 760px)',
+            max-width 100%,
+            padding-left 20px,
+            padding-right 20px
+        )
+    )
+);
+
+// -------------------------------------------------------------
+
+@include apply-grid(
+	$use-grid: 'grid-12',
+	$container-selector: '.grid_container',
+	$row-selector: '.grid_row_12',
+	$row-extend-selectors: '%grid_row',
+	$column-selector-prefix: '.grid_col_',
+	$column-extend-selectors: '%grid_col',
+	$output-column-styles-for: 1 2 3 4 5 6 7 8 9 10 11 12,
+	$break-columns: (
+		(
+			breakpoint 3,
+			selector '.grid_col_4, .grid_col_5, .grid_col_6, .grid_col_7, .grid_col_8, .grid_col_9, .grid_col_10',
+			columns 12
+		),
+		(
+			breakpoint 3,
+			selector '.grid_col_3',
+			columns 6
+		)
+	)
+);
+
+// -------------------------------------------------------------
+
+%grid_row{
+	@include clearfix;
+	.no_haslayout &{ // Fixing clearfix for IE6 and IE7
+		clear: both;
+	}
+}
+
+%grid_col {
+	float: left;
+	// padding-bottom: 2em;
+}
+
+// -------------------------------------------------------------
+
+.grid_container{
+	@include clearfix;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (max-width: 766px) {
+	.whitespace{
+		display: none;
+	}
+}

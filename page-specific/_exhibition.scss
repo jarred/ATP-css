@@ -1,0 +1,132 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+
+#exhibition{
+	margin-top: 20px;
+	.video_embed {
+		width: 290px;
+	}
+}
+
+#load_more{
+	margin-bottom: 20px;
+}
+
+#key_works{
+	position: relative;
+	text-align: center;
+	margin: 20px $edge_width 0px $edge_width;
+	background: url('../img/sprites/grids/1x/exhibition-grid-divider.png') repeat top left;
+	
+	&.condensed{
+		max-height: 818px;
+		overflow: hidden;
+	}
+	.exhibition_object{
+		margin: 0px 20px 60px 20px;
+		display: inline-block;
+		text-decoration: none;
+		overflow: hidden;
+		min-width: 220px;
+		position: relative;
+		max-width: 400px;
+		z-index: 1;
+		vertical-align: top;
+		&.loading{
+			@include opacity(0);
+		}
+		.image{
+			height: 290px; /* from 300 */
+			width: 100%;
+			line-height: 300px;
+			img{
+				vertical-align: bottom;
+				max-height: 290px; /* from 300 */
+				position: relative;
+				z-index: 1;
+				max-width: 700px;
+			}
+		}
+		.details_icon{
+			height: 24px;
+			width: 24px;
+			background-color: #FFF;
+			position: absolute;
+			left: 6px;
+			bottom: 71px;
+			z-index: 10;
+			@include border-radius(15px, 15px);
+			.eye{
+				position: absolute;
+				display: block;
+				width: 17px;
+				left: 50%;
+				margin-left: -8px;
+				height: 10px;
+				top: 50%;
+				margin-top: -5px;
+				@include background-sprite('base','icon-eye');
+			}
+		}
+		.info{
+			margin-top: 10px;
+			h2,h3,h4{
+				font: $bold_weight 16px/18px $bold;
+				margin: 0px;
+				padding: 0px;
+				text-align: center;
+			}
+			h2{
+				color: $black;
+				a{
+					color: $black;
+					text-decoration: none;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+			h3{
+				color: $gray;
+			}
+			h4{
+				color: #AAA;
+				font-weight: 400;
+				font-family: $sans;
+			}
+		}
+		&:hover{
+			h2{
+				color: $red;
+			}
+			h3{
+				color: $black;
+			}
+		}
+		&.faded{
+			@include opacity(.1);
+		}
+	}
+	&.full_height{
+		max-height: auto !important;
+	}
+}
+
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2){
+	#key_works{
+			background: url('../img/sprites/grids/2x/exhibition-grid-divider.png') repeat top left;
+			background-size: 100px auto;
+	}
+}
+
+@media screen and (max-width: 766px) {
+	#key_works{
+		.exhibition_object{
+			.image{
+				img{
+					max-width: 100% !important;
+				}
+			}						
+		}
+	}
+}

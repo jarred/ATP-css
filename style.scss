@@ -1,0 +1,61 @@
+@font-face {
+	font-family: 'CalibreWeb-Regular';
+	src: url('../fonts/CalibreWeb-Regular.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/CalibreWeb-Regular.woff') format('woff')
+	}
+	
+@font-face {
+	font-family: 'CalibreWeb-Semibold';
+	src: url('../fonts/CalibreWeb-Semibold.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/CalibreWeb-Semibold.woff') format('woff')
+	}
+
+$sans: 'CalibreWeb-Regular', 'Helvetica Neue', Sans-Serif;
+$bold: 'CalibreWeb-Semibold', 'Helvetica Neue', Sans-Serif;
+$red: #ff3131;
+$green: #1fba3f;
+$purple: #b38af8;
+$yellow: #f1ff0d;
+$black: #222;
+$gray: #AAA;
+$dark_gray: #999;
+$light_gray: #efefef;
+$bold_weight: 500;
+$edge_width: 22px;
+
+html{
+	font: 400 16px/20px $sans;
+	color: $black;
+}
+
+// need to find a better way to do this...
+html,body{
+	overflow-x: hidden;
+}
+
+.hide{
+	display: none !important;
+}
+
+@import "compass/css3/shared";
+@import 'sprites/_make-sprite';
+@import 'helper-functions/_mixin-clearfix';
+@import 'helper-functions/_mixin-grid';
+@import 'layouts/grid-layouts';
+@import 'core/_typography';
+@import 'ui-global/_navigation';
+@import 'ui-elements/_buttons';
+@import 'ui-elements/_tabs';
+@import 'ui-elements/_details';
+@import 'ui-elements/_video';
+@import 'ui-elements/_slider';
+
+// pages
+@import 'page-specific/_off-the-wall';
+@import 'page-specific/_exhibition';
+@import 'page-specific/_index';
+@import 'page-specific/_exhibition-object';
+@import 'page-specific/_search';
+@import 'page-specific/_standard_page';
+@import 'page-specific/_on-the-wall';
+@import 'page-specific/_article';

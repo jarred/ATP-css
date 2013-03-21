@@ -1,0 +1,170 @@
+
+#article{
+	p,
+	blockquote /* rm h1 */
+	{
+		max-width: 460px;
+	}
+	blockquote{
+		font: $bold_weight 26px/28px $bold;
+		font-style: italic;
+		color: $yellow;
+		p{
+			margin: 0px;
+			margin-bottom: 10px;
+		}
+	}
+	.byline{
+		color: $gray;
+	}
+	.extra{
+		position: relative;
+		top: -10px;
+		margin: 20px;
+		margin-right: 0px;
+		float: right;
+		clear: right;
+		width: 380px;
+		/*border-color: $purple;
+		color: $purple;*/
+		audio {
+			width: 100%;
+			display: block;
+			margin-top: 10px;
+		}
+	}
+	.image{
+		position: relative;
+		top: -10px;
+		margin: 20px;
+		margin-right: 0px;
+		float: right;
+		clear: right;
+		opacity: 0;
+		p{
+			margin: 0px;
+			width: 240px;
+			font: 400 14px/17px $sans;
+			color: $gray;
+			margin-top: 10px;
+		}
+		img{
+			width: 380px;
+			max-width:	100%;
+		}
+		&.big{
+			margin: 20px 0px;
+			clear: both;
+			img{
+				max-width: 100%;
+				width: auto;
+			}
+			p{
+				position: absolute;
+				right: 137px;
+			}
+		}
+		&.tall{
+			position: relative;
+			right: 100px;
+			img{
+				width: 280px;
+			}
+		}
+		&.big + p {
+			clear: both;
+		}
+	}
+	.no-js .image {
+		opacity: 1;
+	}
+	.image-unassoc{
+		float: left;
+		clear: none;
+	}
+	.interviewer,
+	.interviewee{
+		.person{
+			text-transform: uppercase;
+			font: $bold_weight 12px/12px $bold;
+			position: relative;
+			top: 50%;
+			margin-top: -6px;
+			letter-spacing: 2px;
+			margin-right: 3px;
+			border-bottom: 1px solid #FFF;
+		}
+	}
+	.interviewer{
+		color: $gray;
+		.person{
+			color: #FFF;
+		}
+	}
+	.interviewee{
+		.person{
+			color: $yellow;
+			border-color: $yellow;
+		}
+	}
+}
+
+@media screen and (max-width: 1020px) {
+	#article{
+		p,
+		blockquote,
+		h1{
+			max-width: 414px;
+		}
+		.extra{
+			width: 248px;
+		}
+		.image{
+			img{
+				width: 228px;
+			}
+			&.tall{
+				right: auto;
+				img{
+					width: 228px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 766px) {
+	#article{
+		p,
+		blockquote,
+		h1{
+			max-width: 100%;
+		}
+		.extra{
+			float: none;
+			margin: 20px 0px;
+			width: auto;
+		}
+		.image{
+			top: 0px;
+			margin: 20px 0px;
+			float: none;
+			img{
+				width: auto;
+				max-width: 100%;
+			}
+			&.big{
+				p{
+					position: relative;
+					right: auto;
+				}
+			}
+			&.tall{
+				img{
+					width: auto;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}

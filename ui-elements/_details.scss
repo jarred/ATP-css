@@ -1,0 +1,17 @@
+hr.double{
+	height: 2px;
+	display: block;
+	border: 0px;
+	border: 1px solid $gray;
+	border-bottom-style: dotted;
+	border-left-color: transparent;
+	border-right-color: transparent;
+
+	.off_the_wall &{
+		border-top-color: #555;
+		border-bottom-color: #555;
+	}
+	.grid_col_6 &{
+		margin-right: 60px;
+	}
+}

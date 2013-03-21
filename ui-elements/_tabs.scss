@@ -1,0 +1,61 @@
+.tabs{
+	.border{
+		position: absolute;
+		left: $edge_width;
+		right: $edge_width;
+		border-top: 1px dotted #CCC;
+	}
+	ul{
+		display: inline-block;
+		margin: 0px;
+		padding: 0px;
+		li{
+			display: inline-block;
+			float: left;
+			margin-left: -1px;
+			&:first-child{
+				margin-left: 0px;
+			}
+			a{
+				background-color: $light_gray;
+				display: inline-block;
+				padding: 4px 8px;
+				border: 1px solid #DDD;
+				border-top-color: #DADADA;
+				text-decoration: none;
+				color: $gray;
+				position: relative;
+				z-index: 10;
+				&:hover{
+					color: $black;
+					background-color: #FFF;
+					border-bottom-color: $gray;
+				}
+			}
+			&.label{
+				span{
+					background-color: #FFF;
+					display: inline-block;
+					padding: 4px 8px;
+					border: 1px solid #FFF;
+					border-top-color: #DADADA;
+					text-decoration: none;
+					color: $black;
+					position: relative;
+					z-index: 10;
+				}
+			}
+			&.active{
+				a{
+					color: $black;
+					border-bottom: 1px dotted #CCC;
+					border-top-color: #FFF;
+					background-color: #FFF;
+					z-index: 20;
+				}
+			}
+		}
+	}
+	// TODO:
+	// inverted style for .off_the_wall
+}

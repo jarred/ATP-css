@@ -1,0 +1,49 @@
+@import './sprites/_mixin-sprites';
+
+/* ------------------------------------------------------------------- *
+ |  TYPE:           Mixin calls
+ |  AUTHOR(S):      Frej
+ |  DATE CREATED:   20/09/2012
+ |  DATE UPDATED:   20/09/2012
+ |  DESCRIPTION:    Building sprites.
+ |                  Create your new sprites in this document.
+ |  
+ * ------------------------------------------------------------------- *
+    EXAMPLE
+    -------
+    
+    See _mixin-sprites.scss for documentation
+
+ * ------------------------------------------------------------------- */
+
+// Base
+@include make-sprite( $folder-name: 'base', $use-retina: true, $sprite-spacing: $sprite-spacing * 2 );
+
+// Buttons
+// @include make-sprite( $folder-name: 'button', $use-retina: true, $sprite-spacing: $sprite-spacing * 2 );
+
+// Repeat-x
+// @include make-sprite( $folder-name: 'repeat-x', $use-retina: true );
+
+// Repeat-y
+// @include make-sprite( $folder-name: 'repeat-y', $use-retina: true );
+
+// Video player
+// @include make-sprite( $folder-name: 'video-js', $use-retina: true );
+
+/* ------------------------------------------------------------------- *
+ |  PAGE SPRITES
+ |  Add all page- or section-specific sprites here
+ * ------------------------------------------------------------------- */
+
+// Mobile app
+// @include make-sprite( $folder-name: 'mobile-app', $use-retina: true, $sprite-spacing: $sprite-spacing * 4 );
+
+
+
+
+// Calling all sprites so the ruby code can finde their reference and delete the unused sprite file.
+// OBS! Temporary hack until we have a proper way of deleting sprite files
+.testing-sprite-mixin{
+	//@include background-sprite('base','logo-arts-te-papa');
+}

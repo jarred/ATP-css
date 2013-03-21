@@ -1,0 +1,52 @@
+.btn{
+	height: 42px;
+	border: 0px;
+	display: inline-block;
+	min-width: 222px;
+	border: 1px solid $red;
+	text-align: center;
+	padding: 0px;
+	font: $bold_weight 12px/42px $bold;
+	text-transform: uppercase;
+	color: #FFF;
+	letter-spacing: 4px;
+	background-color: $red;
+	position: relative;
+	text-decoration: none;
+	overflow: visible;
+	.edge{
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		bottom: -3px;
+		border-bottom: 1px solid $red;
+	}
+	&:hover{
+		background-color: #FFF;
+		color: $red;
+		.border{
+			border-bottom-style: dotted;
+		}
+	}
+	&:active{
+		top: 2px;
+		border-color: #CCC;
+		color: #CCC;
+		background-color: #fafafa;
+		text-indent: -2px;
+		.edge{
+			display: none;
+		}
+	}
+	.off_the_wall &{
+		background-color: $green;
+		border-color: $green;
+		.edge{
+			border-color: $green;
+		}
+		&:hover{
+			background-color: $black;
+			color: $green;
+		}
+	}
+}

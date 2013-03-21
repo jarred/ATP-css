@@ -1,0 +1,240 @@
+blockquote{
+	font-style: italic;
+	margin: 0px;
+}
+
+h1,
+h2,
+h3{
+	//-webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,
+blockquote,
+p{
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+strong{
+	font-family: $bold;
+	font-weight: $bold_weight;
+}
+
+p .reference{
+	color: $gray;
+	font-size: 0.9em;
+}
+
+p.big{
+	font: 400 22px/26px $sans;
+}
+
+// links inside headings
+
+h1,
+h2,
+h3,
+h4{
+	a{
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+
+.intro p{
+	position: relative;
+	z-index: 1;
+	font: 400 30px/34px $sans;
+	max-width: 800px;
+	margin: 0px;
+	padding: 30px 0px;
+	.light{
+		color: $gray;
+	}
+}
+p.meta{
+	color: $gray;
+	font-size: 0.9em;
+	a{
+		color: $gray;
+	}
+	.what{
+		text-transform: uppercase;
+	}
+}
+p.metamaterials:first-letter {
+	text-transform: uppercase;
+}
+p a,
+blockquote a{
+	color: $red;
+	text-decoration: underline;
+	position: relative;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+.off_the_wall{
+	color: #FFF;
+	h1,
+	h2,
+	h3,
+	h4,
+	blockquote{
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+h1{
+	font: $bold_weight 40px/35px $bold;
+	width: auto;
+	margin: 0px;
+	display: block;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+
+h2.date{
+	font: $bold_weight 14px/17px $bold;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+}
+
+h5.divider, h1.divider{ /* Added h1 because of the issue page that would otherwise not have any h1. */
+	margin-bottom: 20px;
+	padding: 0px;
+//	border-bottom: 1px solid $black;
+	text-transform: uppercase;
+	font: $bold_weight 12px/20px $bold;
+	letter-spacing: 2px;
+	.border{
+		position: absolute;
+		left: $edge_width;
+		right: $edge_width;
+		border-top: 1px solid #DDD;
+	}
+	span{
+		display: inline-block;
+		background-color: $black;
+		color: #FFF;
+		padding: 2px 4px 2px 6px;
+	}
+	.off_the_wall &{
+		.border{
+			border-color: #444;
+		}
+		span{
+			background-color: #FFF;
+			color: $black;
+		}
+	}
+}
+
+a.read_more,
+a.read_less{
+	font-weight: $bold_weight;
+	text-decoration: underline;
+	font-family: $bold;
+	&:hover{
+		text-decoration: none;
+	}
+	&:active{
+		color: $gray;
+		text-decoration: none;
+	}
+}
+
+.small_caps{
+	font: 400 12px/16px $sans;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	.off_the_wall &{
+		font: $bold_weight 12px/16px $bold !important;
+	}
+}
+.off_the_wall .medium_caps {
+	font: 500 14px/18px $sans;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.now_showing{
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase !important;
+	font: 400 12px/12px $sans !important;
+	letter-spacing: 2px !important;
+	border: 1px solid $red;
+	color: $red;
+	padding: 4px;
+}
+
+a.exhibition_extra{
+	display: inline-block;
+	border: 1px solid $black;
+	font: $bold_weight 12px/40px $bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	position: relative;
+	text-decoration: none;
+	padding-left: 60px;
+	color: $black;
+	padding-right: 18px;
+	.icon{
+		display: block;
+		background-color: $black;
+		width: 40px;
+		height: 40px;
+		margin-right: 10px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+	&.audio{
+		.icon{
+				@include background-sprite('base','icon-headphones');
+		}
+	}
+	&.mobile_guide{
+		.icon{ 
+			@include background-sprite('base','icon-mobile-guide');
+		}
+	}
+}
+.exhibition_extra {
+	.off_the_wall &{
+		border: 1px solid $purple;
+		color: $purple;
+		margin-bottom: 30px;
+		padding: 10px;
+		.icon{
+			background-color: $purple;
+		}
+	}
+	&.audio{
+		a .icon{
+			@include background-sprite('base','icon-headphones');
+		}
+	}
+	a{
+		color: $purple;
+		&:hover{
+			border-color: $red;
+			color: $red;
+			.icon{
+				background-color: $red;
+			}
+			.off_the_wall &{
+				border-color: $green;
+				color: $green;
+				.icon{
+					background-color: $green;
+				}
+			}
+		}
+	}
+}
