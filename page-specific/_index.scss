@@ -80,6 +80,10 @@
 			.mouse_trap{
 				display: none;
 			}
+			.type{
+				top: 40px;
+				margin-top: 0px;
+			}
 			.image{
 				position: relative;
 				top: auto !important;
@@ -133,10 +137,20 @@
 	.off_the_wall{
 		margin: 0px 20px;
 		padding: 60px 0px;
+		position: relative;
+		a.link{
+			display: block;
+			position: absolute;
+			z-index: 10;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			left: 0px;
+			text-decoration: none;
+		}
 		blockquote{
-			font: 400 51px/52px $sans;
+			font: $bold_weight 51px/52px $bold;
 			margin-bottom: 60px;
-			font-style: italic;
 		}
 		.ref{
 			font: 400 20px/26px $sans;
@@ -150,9 +164,11 @@
 			color: #FFF;
 		}
 		@media screen and (max-width: 766px) {
-			padding: 40px 0px;
+			padding: 20px 0px;
 			blockquote{
-				margin-bottom: 40px;
+				margin-bottom: 30px;
+				font-size: 40px;
+				line-height: 40px;
 			}
 		}
 	}
