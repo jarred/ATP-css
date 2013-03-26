@@ -10,8 +10,17 @@
 	     url('../fonts/CalibreWeb-Semibold.woff') format('woff')
 	}
 
+@font-face {
+	font-family: 'CalibreWebItalic-Regular';
+	src: url('../fonts/CalibreWebItalic-Regular.eot?#iefix') format('embedded-opentype'), 
+	     url('../fonts/CalibreWebItalic-Regular.woff') format('woff')
+	}
+
+
 $sans: 'CalibreWeb-Regular', 'Helvetica Neue', Sans-Serif;
 $bold: 'CalibreWeb-Semibold', 'Helvetica Neue', Sans-Serif;
+$italic: 'CalibreWebItalic-Regular', 'Helvetica Neue', Sans-Serif;
+
 $red: #ff3131;
 $green: #1fba3f;
 $purple: #b38af8;
