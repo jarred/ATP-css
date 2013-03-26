@@ -83,13 +83,34 @@
 }
 
 .article_preview{
-	padding-bottom: 80px;
-	clear: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted #444;
+	&:last-child{
+		border-bottom: none;
+	}
+	.article_image{
+		text-align: center;
+		img{
+			max-width: 100%;
+		}
+		.image{
+			margin-right: 10px;
+			display: block;
+			min-height: 1px;
+		}
+	}
+	blockquote{
+		color: #AAA;
+		margin-bottom: 30px;
+		font: 400 24px/24px $sans;
+	}
 	h2{
 		a{
 			font: 500 40px/35px $bold;
 			color: $black;
 			text-decoration: none;
+			margin-bottom: 0px;
 			.off_the_wall &{
 				color: #FFF;
 			}
@@ -97,21 +118,27 @@
 				text-decoration: underline;
 			}
 		}
+		&.dark{
+			a{
+				color: $black;
+			}
+		}
 	}
 	p.byline{
 		color: $gray;
 		margin-bottom: 10px;
 	}
-	blockquote{
-		font: 400 26px/28px $sans;
-		/*font-style: italic;*/
-	}
-	.article_thumbnail {
-		/*padding-bottom: 80px;
-		width: 300px;
-		float: left;
-		padding-top: 5px;
-		height: 150px; /* this is to cater for when there's no image loaded - which shouldn't happen in theory */
+	@media screen and (max-width: 766px) {
+		.article_image{
+			text-align: left;
+			max-height: auto;
+			margin-bottom: 20px;
+			img{
+				max-height: auto;
+				width: auto;	
+				height: auto;
+			}
+		}
 	}
 }
 
