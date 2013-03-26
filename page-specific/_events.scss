@@ -28,9 +28,13 @@
 					color: #FFF;
 				}
 			}
+			@media screen and (max-width: 1020px) {
+				height: auto;
+			}
 			@media screen and (max-width: 766px) {
 				height: auto;
 				background-color: transparent;
+
 				h2{
 					padding: 0px;
 					a{
@@ -50,7 +54,6 @@
 		.event_meta{
 			margin-left: 0px !important;
 			p{
-				margin-top: 10px;
 				.date{
 					color: $red;
 				}
