@@ -2,6 +2,10 @@
 	margin-top: 20px;
 	.event{
 		margin-bottom: 40px;
+		min-height: 600px;
+		@media screen and (max-width: 766px) {
+			min-height: auto;
+		}
 		.event_image{
 			margin-bottom: 20px;
 			font-size: 0px;
