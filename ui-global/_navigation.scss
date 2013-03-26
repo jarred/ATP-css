@@ -359,6 +359,7 @@
 	background-color: #f5f5f5;
 	padding: 20px 0px;
 	font-size: 15px;
+	margin-top: 40px;
 	.col{
 		padding-bottom: 20px;
 	}
@@ -380,6 +381,33 @@
 		padding: 0px;
 		li{
 			list-style-type: none;
+		}
+	}
+	#sponsors{
+		.sponsor{
+			height: 65px;
+			display: inline-block;
+			margin-right: 10px;
+			margin-bottom: 20px;
+			&.apw{
+				@include background-sprite('base','sponsor-apw');
+				width: 149px;
+			}
+			&.ahc{
+				@include background-sprite('base','sponsor-australian-high-comission');
+				width: 135px;
+			}
+			&.eny{
+				@include background-sprite('base','sponsor-earnst-n-young');
+				width: 138px;
+			}
+			&.hp{
+				@include background-sprite('base','sponsor-hp');
+				width: 65px;
+			}
+		}
+		.fix{
+			@include background-sprite('base','fix');
 		}
 	}
 }
