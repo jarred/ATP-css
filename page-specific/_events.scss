@@ -40,9 +40,12 @@
 			}
 		}
 		.event_type{
+			color: $black;
 			display: inline-block;
 			border: 1px solid $black;
-			padding: 0px 5px;
+			padding: 0px 3px 0px 5px;
+			font: 400 12px/18px $sans;
+			text-decoration: none;
 		}
 		.event_meta{
 			margin-left: 0px !important;
