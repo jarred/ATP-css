@@ -7,6 +7,8 @@
 		background-color: $black;
 		overflow: hidden;
 		position: relative;
+		text-decoration: none;
+		display: block;
 		.ctrls{
 			position: absolute;
 			width: 60px;
@@ -27,7 +29,7 @@
 			position: absolute;
 			left: 0px;
 			right: 0px;
-			top: 0px;
+			top: -200px;
 			z-index: 1;
 			@include opacity(0);
 			img{
@@ -60,18 +62,22 @@
 				top: -3px;
 			}
 		}
-		a.link{
-			position: absolute;
+		.mouse_trap{
+			position: relative;
 			z-index: 20;
 			left: 0px;
 			right: 0px;
-			top: 0px;
+			height: 500px;
 			bottom: 0px;
 			display: block;
+			zoom: 1;
+			// IE hack!
+			background-color: rgba(255, 255, 255, .001);
 		}
 		@media screen and (max-width: 636px) {
 			height: auto !important;
-			.ctrls{
+			.ctrls,
+			.mouse_trap{
 				display: none;
 			}
 			.image{
