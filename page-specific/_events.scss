@@ -21,7 +21,7 @@
 			margin-bottom: 20px;
 			background-color: $black;
 			position: relative;
-			height: 266px;
+			height: 222px;
 			h2{
 				padding: 20px;
 				a{
@@ -29,12 +29,12 @@
 				}
 			}
 			@media screen and (max-width: 1020px) {
+				min-height: 168px;
 				height: auto;
 			}
 			@media screen and (max-width: 766px) {
 				height: auto;
 				background-color: transparent;
-
 				h2{
 					padding: 0px;
 					a{
