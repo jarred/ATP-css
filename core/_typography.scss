@@ -9,7 +9,8 @@ h3{
 	//-webkit-font-smoothing: antialiased;
 }
 
-i{
+i,
+p em{
 	font-style: normal;
 	font-family: $italic;
 	font-weight: 400;
@@ -112,6 +113,7 @@ h2.date{
 	font: $bold_weight 14px/17px $bold;
 	letter-spacing: 2px;
 	margin-bottom: 10px;
+	text-transform: uppercase;
 }
 
 h5.divider, h1.divider{ /* Added h1 because of the issue page that would otherwise not have any h1. */
