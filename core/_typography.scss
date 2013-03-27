@@ -188,14 +188,13 @@ a.read_less{
 a.exhibition_extra{
 	display: inline-block;
 	border: 1px solid $black;
-	font: $bold_weight 12px/40px $bold;
+	font: $bold_weight 12px/20px $bold;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	position: relative;
 	text-decoration: none;
-	padding-left: 60px;
+	padding: 10px 20px 10px 60px;
 	color: $black;
-	padding-right: 18px;
 	.icon{
 		display: block;
 		background-color: $black;
