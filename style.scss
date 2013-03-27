@@ -33,11 +33,12 @@ $bold_weight: 500;
 $edge_width: 22px;
 
 html{
-	font: 400 17px/17px $sans;
+	font: 400 17px/21px $sans;
 	color: $black;
+	-webkit-font-smoothing: antialiased;
 }
 body{
-	font: 400 17px/20px $sans;
+	font: 400 17px/21px $sans;
 }
 
 // need to find a better way to do this...
