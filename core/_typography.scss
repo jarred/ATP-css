@@ -135,6 +135,9 @@ h5.divider, h1.divider{ /* Added h1 because of the issue page that would otherwi
 		color: #FFF;
 		padding: 2px 4px 2px 6px;
 	}
+	a{
+		color: $gray;
+	}
 	.off_the_wall &{
 		.border{
 			border-color: #444;
