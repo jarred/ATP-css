@@ -76,7 +76,9 @@ p.metamaterials:first-letter {
 	text-transform: uppercase;
 }
 p a,
-blockquote a{
+blockquote a,
+ol a,
+li a{
 	color: $red;
 	text-decoration: underline;
 	position: relative;
@@ -106,7 +108,7 @@ h1{
 }
 
 h1.page_heading{
-	margin: 40px 0px;
+	margin: 30px 0px;
 }
 
 h2.date{
