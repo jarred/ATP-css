@@ -16,14 +16,14 @@
 	position: relative;
 	text-align: center;
 	margin: 20px $edge_width 0px $edge_width;
-	background: url('../img/sprites/grids/1x/exhibition-grid-divider.png') repeat top left;
+//	background: url('../img/sprites/grids/1x/exhibition-grid-divider.png') repeat top left;
 	
 	&.condensed{
-		max-height: 818px;
+		max-height: 838px;
 		overflow: hidden;
 	}
 	.exhibition_object{
-		margin: 0px 20px 60px 20px;
+		margin: 0px 20px 80px 20px;
 		display: inline-block;
 		text-decoration: none;
 		overflow: hidden;
@@ -39,6 +39,8 @@
 			height: 290px; /* from 300 */
 			width: 100%;
 			line-height: 300px;
+			position: relative;
+			top: -10px;
 			img{
 				vertical-align: bottom;
 				max-height: 290px; /* from 300 */
@@ -114,14 +116,14 @@
 
 @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2){
 	#key_works{
-			background: url('../img/sprites/grids/2x/exhibition-grid-divider.png') repeat top left;
-			background-size: 100px auto;
+//			background: url('../img/sprites/grids/2x/exhibition-grid-divider.png') repeat top left;
+//			background-size: 100px auto;
 	}
 }
 
 @media screen and (max-width: 766px) {
 	#key_works{
-		background: url('../img/sprites/grids/1x/exhibition-grid-divider.png') repeat top left;
+//		background: url('../img/sprites/grids/1x/exhibition-grid-divider.png') repeat top left;
 		.exhibition_object{
 			.image{
 				height: auto;
