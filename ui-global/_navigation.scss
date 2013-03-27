@@ -93,19 +93,27 @@
 		}
 		input{
 			position: relative;
-			top: 3px;
+			top: 5px;
 			border: 0px;
-			padding: 0px;
+			padding: 3px;
 			outline: none;
 			background-color: transparent;
 			font: 400 16px/20px $sans;
-			.off_the_wall &{
-				color: #FFF;
-			}
+			cursor: pointer;
+			color: $gray;
 			&:focus{
+				background-color: #EEE;
+				cursor: auto;
+				color: $black;
 				:-moz-placeholder,
 				::-webkit-input-placeholder{
 					color: #FFF;
+				}
+			}
+			.off_the_wall &{
+				color: #FFF;
+				&:focus{
+					background-color: #000;
 				}
 			}
 		}
