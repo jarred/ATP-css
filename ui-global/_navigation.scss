@@ -56,6 +56,11 @@
 				@include background-sprite('base','logo-arts-te-papa-white');
 			}
 		}
+		@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2){
+			.logo{
+				background-position: 0px -73px !important;
+			}
+		}
 		&:hover{
 			.text{
 				em{
