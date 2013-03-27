@@ -121,8 +121,10 @@
 
 @media screen and (max-width: 766px) {
 	#key_works{
+		background: url('../img/sprites/grids/1x/exhibition-grid-divider.png') repeat top left;
 		.exhibition_object{
 			.image{
+				height: auto;
 				img{
 					max-width: 100% !important;
 				}
