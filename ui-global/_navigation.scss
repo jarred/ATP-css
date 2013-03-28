@@ -217,6 +217,12 @@
 			&.open{
 				display: block;
 			}
+			form.nav_item{
+				.text{
+					position: relative;
+					bottom: auto;
+				}
+			}
 			ul{
 				margin: 0px;
 				padding: 0px;
